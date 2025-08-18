@@ -82,14 +82,14 @@ on:
 
 jobs:
   test:
-    name: Run Go Tests
+    name: Run Go Tests Job
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'  # Only run tests during PR
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run Go tests
+      - name: Run Go tests step
         run: go test ./... -v
 
   deploy:
